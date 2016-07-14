@@ -1,27 +1,9 @@
-# Laravel PHP Framework
+# Pick Fifty
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+Recently my publisher told me I had 50 free eBook copies of [Laravel: Up and Running](https://laravelupandrunning.com/) to give away for advance readers. I set up a Google Form and got 458 submissions.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+Now, I had to pick 50. I downloaded a CSV from the form and read them all and marked the first column with an `x` if their reason for wanting to read the book was compelling, and then I also sprinkled a few more `x's` just to make sure I had a solid amount of people at varying ability levels. That left me with 84 people.
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+Then I wrote [this quick PickFifty](https://github.com/mattstauffer/pickfifty/blob/master/app/Console/Commands/PickFifty.php) command that reads the CSV, filters it, and then saves it.
 
-## Official Documentation
-
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+This task doesn't need Laravel, but it was literally faster to make it in Laravel than it was to fuss with setting up console commands and filesystem access and Composer. Which is stupid. But it's true.
